@@ -13,3 +13,153 @@
 2026-07-22 02:02:46 | INFO     | uvicorn.error | Waiting for application shutdown.
 2026-07-22 02:02:46 | INFO     | uvicorn.error | Application shutdown complete.
 2026-07-22 02:02:50 | INFO     | uvicorn.access | 127.0.0.1:52153 - "GET /api/v1/health HTTP/1.1" 200
+2026-07-22 22:27:25 | INFO     | app.config.logging | Logging initialized
+2026-07-22 22:27:25 | INFO     | app.main | Application started
+2026-07-22 22:27:32 | INFO     | app.config.logging | Logging initialized
+2026-07-22 22:27:32 | INFO     | app.main | Application started
+2026-07-22 22:27:59 | INFO     | app.config.logging | Logging initialized
+2026-07-22 22:27:59 | INFO     | app.main | Application started
+2026-07-22 22:28:00 | INFO     | mysql.connector | package: mysql.connector.plugins
+2026-07-22 22:28:00 | INFO     | mysql.connector | plugin_name: caching_sha2_password
+2026-07-22 22:28:00 | INFO     | mysql.connector | AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2026-07-22 22:28:00 | INFO     | mysql.connector | package: mysql.connector.plugins
+2026-07-22 22:28:00 | INFO     | mysql.connector | plugin_name: sha256_password
+2026-07-22 22:28:00 | INFO     | mysql.connector | AUTHENTICATION_PLUGIN_CLASS: MySQLSHA256PasswordAuthPlugin
+2026-07-22 22:28:00 | ERROR    | app.database.engine | Database connection check failed
+Traceback (most recent call last):
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 144, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 3319, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\pool\base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\pool\impl.py", line 178, in _do_get
+    with util.safe_reraise():
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\pool\impl.py", line 176, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\pool\base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\mysql\connector\pooling.py", line 323, in connect
+    return MySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\mysql\connector\connection.py", line 185, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\mysql\connector\abstracts.py", line 1604, in connect
+    self._open_connection()
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\mysql\connector\connection.py", line 411, in _open_connection
+    raise err
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\mysql\connector\connection.py", line 388, in _open_connection
+    self._do_auth(
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\mysql\connector\connection.py", line 320, in _do_auth
+    ok_pkt = self._authenticator.authenticate(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\mysql\connector\authentication.py", line 381, in authenticate
+    ok_pkt = self._handle_server_response(sock, pkt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\mysql\connector\authentication.py", line 287, in _handle_server_response
+    raise get_exception(pkt)
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'user'@'localhost' (using password: YES)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Projects\Financial Intelligence Platform\app\database\engine.py", line 28, in check_database_connection
+    with engine.connect() as conn:
+         ^^^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 3295, in connect
+    return self._connection_cls(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 2450, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 144, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 3319, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\pool\base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\pool\impl.py", line 178, in _do_get
+    with util.safe_reraise():
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\pool\impl.py", line 176, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\pool\base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\mysql\connector\pooling.py", line 323, in connect
+    return MySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\mysql\connector\connection.py", line 185, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\mysql\connector\abstracts.py", line 1604, in connect
+    self._open_connection()
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\mysql\connector\connection.py", line 411, in _open_connection
+    raise err
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\mysql\connector\connection.py", line 388, in _open_connection
+    self._do_auth(
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\mysql\connector\connection.py", line 320, in _do_auth
+    ok_pkt = self._authenticator.authenticate(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\mysql\connector\authentication.py", line 381, in authenticate
+    ok_pkt = self._handle_server_response(sock, pkt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SPARSH\AppData\Local\Programs\Python\Python312\Lib\site-packages\mysql\connector\authentication.py", line 287, in _handle_server_response
+    raise get_exception(pkt)
+sqlalchemy.exc.ProgrammingError: (mysql.connector.errors.ProgrammingError) 1045 (28000): Access denied for user 'user'@'localhost' (using password: YES)
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-07-22 22:28:00 | INFO     | httpx | HTTP Request: GET http://testserver/api/v1/health "HTTP/1.1 200 OK"

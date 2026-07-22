@@ -33,6 +33,7 @@ class Settings(BaseSettings):
     DATABASE_ECHO: bool = False
     DATABASE_POOL_SIZE: int = 10
     DATABASE_MAX_OVERFLOW: int = 20
+    DATABASE_POOL_PRE_PING: bool = True
 
     # Redis
     REDIS_URL: str = "redis://localhost:6379/0"
