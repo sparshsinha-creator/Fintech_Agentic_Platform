@@ -28,6 +28,12 @@ class Settings(BaseSettings):
     APP_HOST: str = "0.0.0.0"
     APP_PORT: int = 8000
 
+    # JWT
+    JWT_SECRET_KEY: str = "change-me-to-a-random-secret"
+    JWT_ALGORITHM: str = "HS256"
+    JWT_ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
+    JWT_REFRESH_TOKEN_EXPIRE_DAYS: int = 7
+
     # Database
     DATABASE_URL: str = "mysql+mysqlconnector://user:password@localhost:3306/myfinance_db"
     DATABASE_ECHO: bool = False

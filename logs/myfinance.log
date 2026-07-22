@@ -163,3 +163,9 @@ Traceback (most recent call last):
 sqlalchemy.exc.ProgrammingError: (mysql.connector.errors.ProgrammingError) 1045 (28000): Access denied for user 'user'@'localhost' (using password: YES)
 (Background on this error at: https://sqlalche.me/e/20/f405)
 2026-07-22 22:28:00 | INFO     | httpx | HTTP Request: GET http://testserver/api/v1/health "HTTP/1.1 200 OK"
+2026-07-22 22:53:08 | INFO     | app.config.logging | Logging initialized
+2026-07-22 22:53:08 | INFO     | app.main | Application started
+2026-07-22 22:53:15 | INFO     | app.config.logging | Logging initialized
+2026-07-22 22:53:15 | INFO     | app.main | Application started
+2026-07-22 22:53:22 | INFO     | app.config.logging | Logging initialized
+2026-07-22 22:53:22 | INFO     | app.main | Application started

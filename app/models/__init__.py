@@ -1,6 +1,5 @@
-"""
-Database model definitions.
+"""SQLAlchemy ORM models."""
 
-One file per primary model (User, Transaction, Goal, Investment, etc.).
-Models define table schemas and relationships only — no business logic.
-"""
+from app.models.user import User
+
+__all__ = ["User"]

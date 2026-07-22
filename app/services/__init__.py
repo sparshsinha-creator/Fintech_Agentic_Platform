@@ -1,6 +1,6 @@
-"""
-Business logic layer.
+"""Business logic services."""
 
-All financial calculations, validations, and domain rules
-reside here. Services coordinate repositories and external clients.
-"""
+from app.services.auth_service import AuthService
+from app.services.user_service import UserService
+
+__all__ = ["AuthService", "UserService"]
